@@ -22,7 +22,7 @@ export default {
   name: 'my-timeline',
   data: function () {
     return {
-      n: 4, // number of layers
+      n: 2, // number of layers
       m: 200, // number of samples per layer
       k: 10, // number of bumps per layer
       layers0: null,
