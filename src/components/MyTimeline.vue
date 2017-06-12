@@ -1,11 +1,12 @@
 <template>
-  <div class="container">
-    <button @click="transition">Update</button>
-    <svg width="960" height="500">
+  <div>
+    <svg width="550" height="400">
       <path
         v-for="(layer, i) in layers0"
         v-bind:d="area(layer)"
+
         v-bind:fill="getFill(i)"
+        fill-opacity="0.9"
       ></path>
     </svg>
   </div>
@@ -72,6 +73,7 @@ export default {
         this.width = this.$el.offsetWidth
         this.height = this.$el.offsetHeight
         this.update()
+        this.transition()
       }
     },
     getFill: function (i) {
@@ -83,19 +85,26 @@ export default {
       var workingArray1 = _.flattenDeep(this.layers0)
       var workingArray2 = _.flattenDeep(this.layers1)
       this.layers1 = _.cloneDeep(this.layers0)
-      var self = this
+      var that = this
       var tween = new TWEEN.Tween(workingArray1)
-        .to(workingArray2, 2500)
+        .to(workingArray2, 10000)
         .onUpdate(function () {
           let count = 0
-          for (let i = 0; i < self.layers0.length; i++) {
-            for (let j = 0; j < self.layers0[i].length; j++) {
-              Vue.set(self.layers0[i][j], 0, this[count++])
-              Vue.set(self.layers0[i][j], 1, this[count++])
+          for (let i = 0; i < that.layers0.length; i++) {
+            for (let j = 0; j < that.layers0[i].length; j++) {
+              Vue.set(that.layers0[i][j], 0, this[count++])
+              Vue.set(that.layers0[i][j], 1, this[count++])
             }
           }
         })
-      tween.start()
+        .onComplete(function () {
+          // that.transition()
+        })
+      tween
+        .easing(TWEEN.Easing.Quadratic.InOut)
+        // .yoyo()
+        // .repeat(Infinity)
+        .start()
       requestAnimationFrame(animate)
       function animate (time) {
         requestAnimationFrame(animate)
