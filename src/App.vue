@@ -6,9 +6,16 @@
 
 <script>
 import 'bootstrap/dist/css/bootstrap.css'
+import WebFont from 'webfontloader'
 export default {
   name: 'app'
 }
+
+WebFont.load({
+  google: {
+    families: ['Quicksand:300,400,500,700']
+  }
+})
 </script>
 
 <style>
@@ -18,7 +25,7 @@ html, body {
   height: 100%;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #3c4653;

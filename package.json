@@ -18,11 +18,14 @@
     "bootstrap": "^4.0.0-alpha.6",
     "d3": "^4.9.1",
     "lodash": "^4.17.4",
+    "rellax": "^1.0.0",
+    "scrollmagic": "^2.0.5",
     "tween.js": "^16.6.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1",
     "vue-typer": "^1.0.3",
-    "vuex": "^2.3.1"
+    "vuex": "^2.3.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
