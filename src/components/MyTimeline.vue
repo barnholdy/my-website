@@ -48,7 +48,6 @@ export default {
       this.layers0 = stack(d3.transpose(d3.range(this.n).map(() => this.bumps(this.m, this.k))))
       this.layers1 = stack(d3.transpose(d3.range(this.n).map(() => this.bumps(this.m, this.k))))
       this.layers = this.layers0.concat(this.layers1)
-      console.log(this.layers0)
     },
     update: function () {
       // var x = d3.scaleLinear()

@@ -26,6 +26,7 @@ html, body {
 }
 #app {
   font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #3c4653;
