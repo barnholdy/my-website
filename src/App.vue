@@ -23,10 +23,10 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-size: 16px;
 }
 #app {
   font-family: 'Quicksand', sans-serif;
-  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #3c4653;

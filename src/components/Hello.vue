@@ -2,10 +2,10 @@
   <div class="screen--full">
     <div class="container-fluid screen--full container--first">
       <div class="row screen--full">
-        <div class="hidden-sm-down col-5 fullscreen__image ">
-          <img src="../assets/hannesleitner.jpg" width="700" />
+        <div class="col hidden-sm-down col-5 fullscreen__image ">
+          <img src="../assets/hannesleitner.jpg" width="150%" />
         </div>
-        <div class="col-12 col-md-7 fullscreen__text">
+        <div class="col col-12 col-md-7 fullscreen__text">
           <div id="trigger"></div>
           <div id="timeline">
             <!--
@@ -18,37 +18,37 @@
             </div>
           </div>
           <h1 id="title">Hi, I am Hannes Leitner</h1>
-          <p id="teaser" class="lead">
+          <h2 id="teaser" class="lead">
             I do <span v-bind:style="codeStyle">Code</span> and <span v-bind:style="designStyle">Design</span>
-          </p>
+          </h2>
           <br />
         </div>
       </div>
     </div>
     <div class="container-fluid container--second">
       <div class="row text-center">
-        <div class="col-12 col-md-3">
+        <div class="col col-12 col-md-3">
           <h3>Get in touch</h3>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col col-6 col-md-1 col__link">
           <my-email text="send me a mail"><img src="../assets/mail_gray.png" height="40"></my-email>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col col-6 col-md-1 col__link">
           <a href="https://www.xing.com/profile/Hannes_Leitner13" target="_blank">
             <img src="../assets/xing_gray.png" height="40" />
           </a>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col col-6 col-md-1 col__link">
           <a href="https://twitter.com/hannes_leitner" target="_blank">
             <img src="../assets/twitter_gray.png" height="40" />
           </a>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col col-6 col-md-1 col__link">
           <a href="https://github.com/barnholdy" target="_blank">
             <img src="../assets/github_gray.png" height="40" />
           </a>
         </div>
-        <div class="col-12 col-md-1">
+        <div class="col col-6 col-md-1 col__link">
           <a href="https://www.researchgate.net/profile/Hannes_Leitner" target="_blank">
             <img src="../assets/resaechgate_gray.png" height="40" />
           </a>
@@ -108,104 +108,80 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="sass" scoped>
 
-.container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
-}
+$bg-color-first: #fbfcfe
+$bg-color-second: #ffffff
+$border-color: #ddd
 
-.screen--full {
-  height: 100%;
-}
+.screen--full
+  height: 100%
 
-.container--first {
-  background-color: #fbfcfe;
-  border-bottom: solid 1px #ddd;
-}
+  .container--first
+    background-color: $bg-color-first
+    border-bottom: solid 1px $border-color
 
-.container--second {
-  background-color: #ffffff;
-  padding: 20px;
-}
+    .fullscreen__image
+      img
+        position: absolute
+        bottom: 0rem
+        left: 0rem
 
-.container--second .col-12 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+    .fullscreen__text
+      position: absolute
+      bottom: 0rem
+      right: 0rem
 
-.fullscreen__image img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+      #trigger
+        position: absolute
+        bottom: 50vh
 
-.fullscreen__text {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
+      #timeline
+        position: absolute
+        bottom: 12.5rem
 
-h1{
-  margin-bottom: 20px;
-  font-weight: 300;
-  font-size: 2.2rem;
-}
+      #title
+        position: absolute
+        bottom: 8.125rem
+        margin-bottom: 1.25rem
+        font-weight: 300
+        font-size: 2.2rem
 
-.lead{
-  font-weight: 500;
-  font-size: 3.3rem;
-}
+      #teaser
+        position: absolute
+        bottom: 1.25rem
+        height: 6.25rem
+        line-height: 3.75rem
+        font-weight: 500
+        font-size: 3.3rem
 
-h3 {
-  line-height: 50px;
-  font-weight: 500;
-}
+      #image
+        position: absolute
+        left: 50%
+        bottom: 15rem
+        margin-left: -25%
 
-#trigger,
-#timeline,
-#title,
-#teaser{
-  position: absolute;
-}
+        .img__crop--round
+          width: 12.5rem
+          height: 12.5rem
+          position: relative
+          overflow: hidden
+          border-radius: 50%
 
-#trigger{
-  bottom: 50vh;
-}
+          img
+            display: inline
+            margin: 0 -0.5rem
 
-#timeline{
-  bottom: 200px;
-}
+  .container--second
+    background-color: $bg-color-second
+    padding: 1.5rem
 
-#title{
-  bottom: 130px;
-}
+    .col
+      margin-top: 1.5rem
+      margin-bottom: 1.5rem
 
-#teaser{
-  bottom: 20px;
-  height: 100px;
-  line-height: 60px;
-}
-
-#image{
-  position: absolute;
-  left: 50%;
-  bottom: 250px;
-  margin-left: -25%;
-}
-
-.img__crop--round{
-  width: 200px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.img__crop--round img{
-  display: inline;
-  margin: 0 -5px;
-}
+      h3
+        line-height: 2.4rem
+        font-weight: 500
 
 </style>
