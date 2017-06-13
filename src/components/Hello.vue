@@ -1,11 +1,11 @@
 <template>
   <div class="screen--full">
-    <div class="container-fluid screen--full container--first">
+    <div id="container--first" class="container-fluid screen--full">
       <div class="row screen--full">
-        <div class="col hidden-sm-down col-5 fullscreen__image ">
-          <img src="../assets/hannesleitner.jpg" width="150%" />
+        <div id="fullscreen__image" class="col hidden-sm-down col-5">
+          <img src="../assets/hannesleitner.jpg" />
         </div>
-        <div class="col col-12 col-md-7 fullscreen__text">
+        <div id="fullscreen__text" class="col col-12 col-md-7">
           <div id="trigger"></div>
           <div id="timeline">
             <!--
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid container--second">
+    <div class="container-fluid" id="container--second">
       <div class="row text-center">
         <div class="col col-12 col-md-3">
           <h3>Get in touch</h3>
@@ -117,20 +117,18 @@ $border-color: #ddd
 .screen--full
   height: 100%
 
-  .container--first
+  #container--first
     background-color: $bg-color-first
     border-bottom: solid 1px $border-color
 
-    .fullscreen__image
+    #fullscreen__image
       img
         position: absolute
         bottom: 0rem
-        left: 0rem
+        width: 150%
+        max-width: 50rem
 
-    .fullscreen__text
-      position: absolute
-      bottom: 0rem
-      right: 0rem
+    #fullscreen__text
 
       #trigger
         position: absolute
@@ -144,16 +142,15 @@ $border-color: #ddd
         position: absolute
         bottom: 8.125rem
         margin-bottom: 1.25rem
+        font-size: 2.07rem
         font-weight: 300
-        font-size: 2.2rem
 
       #teaser
         position: absolute
         bottom: 1.25rem
-        height: 6.25rem
-        line-height: 3.75rem
-        font-weight: 500
+        height: 6rem
         font-size: 3.3rem
+        font-weight: 500
 
       #image
         position: absolute
@@ -172,13 +169,13 @@ $border-color: #ddd
             display: inline
             margin: 0 -0.5rem
 
-  .container--second
+  #container--second
     background-color: $bg-color-second
-    padding: 1.5rem
+    padding: 1rem
 
     .col
-      margin-top: 1.5rem
-      margin-bottom: 1.5rem
+      margin-top: 1rem
+      margin-bottom: 1rem
 
       h3
         line-height: 2.4rem
