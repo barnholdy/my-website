@@ -29,7 +29,6 @@ html, body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #3c4653;
   height: 100%;
 }
 </style>

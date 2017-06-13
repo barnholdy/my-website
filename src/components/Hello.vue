@@ -27,30 +27,30 @@
     </div>
     <div class="container-fluid" id="container--second">
       <div class="row text-center">
-        <div class="col col-12 col-md-3">
-          <h3>Get in touch</h3>
+        <div class="col col-12 col-md-3 col__heading">
+          <h3 class="align-middle">Get in touch</h3>
         </div>
         <div class="col col-6 col-md-1 col__link">
-          <my-email text="send me a mail"><img src="../assets/mail_gray.png" height="40"></my-email>
+          <my-email text="send me a mail"><img src="../assets/ma.png"></my-email>
         </div>
         <div class="col col-6 col-md-1 col__link">
           <a href="https://www.xing.com/profile/Hannes_Leitner13" target="_blank">
-            <img src="../assets/xing_gray.png" height="40" />
+            <img src="../assets/xi.png" />
           </a>
         </div>
         <div class="col col-6 col-md-1 col__link">
           <a href="https://twitter.com/hannes_leitner" target="_blank">
-            <img src="../assets/twitter_gray.png" height="40" />
+            <img src="../assets/tw.png" />
           </a>
         </div>
         <div class="col col-6 col-md-1 col__link">
           <a href="https://github.com/barnholdy" target="_blank">
-            <img src="../assets/github_gray.png" height="40" />
+            <img src="../assets/gh.png" />
           </a>
         </div>
         <div class="col col-6 col-md-1 col__link">
           <a href="https://www.researchgate.net/profile/Hannes_Leitner" target="_blank">
-            <img src="../assets/resaechgate_gray.png" height="40" />
+            <img src="../assets/rg.png" />
           </a>
         </div>
       </div>
@@ -113,9 +113,11 @@ export default {
 $bg-color-first: #fbfcfe
 $bg-color-second: #ffffff
 $border-color: #ddd
+$font-color: #3c4653
 
 .screen--full
   height: 100%
+  color: $font-color
 
   #container--first
     background-color: $bg-color-first
@@ -176,9 +178,18 @@ $border-color: #ddd
     .col
       margin-top: 1rem
       margin-bottom: 1rem
+      height: 3.5rem
+      line-height: 3.5rem
 
+    .col__heading
       h3
-        line-height: 2.4rem
+        font-size: 1.9rem
         font-weight: 500
+        line-height: 1.8rem
+        vertical-align: middle
+        display: inline-block
 
+    .col__link
+      img
+        height: 3.5rem
 </style>
