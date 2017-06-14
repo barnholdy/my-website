@@ -151,14 +151,18 @@ $font-color: #3c4653
         font-weight: 500
 
       #image
+        $img-radius: 12.5rem
         position: absolute
-        left: 50%
         bottom: 15rem
-        margin-left: -25%
+        left: 50%
+        margin-left: -$img-radius/2
+
+        @media (max-height: 440px)
+          display: none
 
         .img__crop--round
-          width: 12.5rem
-          height: 12.5rem
+          width: $img-radius
+          height: $img-radius
           position: relative
           overflow: hidden
           border-radius: 50%
@@ -188,7 +192,7 @@ $font-color: #3c4653
 
     .col__link
       .img
-          display: block
+          display: inline-block
           height: $radius
           width: $radius
           background-size: $radius
