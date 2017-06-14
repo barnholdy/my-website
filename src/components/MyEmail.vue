@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <a v-bind:href="getMailTo" v-bind:alt="text"><slot /></a>
-  </div>
+    <a :href="getMailTo" :alt="text" :class="classes"><slot /></a>
 </template>
 
 <script>
 export default {
   name: 'my-email',
-  props: ['text', 'src'],
+  props: ['text', 'src', 'classes'],
   computed: {
     getMailTo: function () {
       var ghcjmxf = ['h', 'a', 'n', 'n', 'e', 's', '.', 'l', 'e', 'i', 't', 'n', 'e', 'r', '@', 'm', 'e', '.', 'c', 'o', 'm']

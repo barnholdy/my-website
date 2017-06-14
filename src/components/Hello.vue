@@ -30,8 +30,8 @@
         <div class="col col-12 col-md-3 col__heading">
           <h3 class="align-middle">Get in touch</h3>
         </div>
-        <div class="col col-6 col-md-1 col__link mail">
-          <my-email text="send me a mail" class="mail img"></my-email>
+        <div class="col col-6 col-md-1 col__link">
+          <my-email text="send me a mail" classes="mail img"></my-email>
         </div>
         <div class="col col-6 col-md-1 col__link">
           <a href="https://www.xing.com/profile/Hannes_Leitner13" target="_blank" class="xing img">
@@ -170,12 +170,13 @@ $font-color: #3c4653
   #container--second
     background-color: $bg-color-second
     padding: 1rem
+    $radius: 3rem
 
     .col
       margin-top: 1rem
       margin-bottom: 1rem
-      height: 3.5rem
-      line-height: 3.5rem
+      height: $radius
+      line-height: $radius
 
     .col__heading
       h3
@@ -188,9 +189,9 @@ $font-color: #3c4653
     .col__link
       .img
           display: block
-          height: 3.5rem
-          width: 3.5rem
-          background-size: 3.5rem
+          height: $radius
+          width: $radius
+          background-size: $radius
           background-repeat: no-repeat
 
       .mail
@@ -203,23 +204,23 @@ $font-color: #3c4653
           background-image: url('../assets/xing.png')
 
       .xing:hover
-          background-image: url('../assets/xing.png')
+          background-image: url('../assets/xing_hover.png')
 
       .twitter
           background-image: url('../assets/twitter.png')
 
       .twitter:hover
-          background-image: url('../assets/twitter.png')
+          background-image: url('../assets/twitter_hover.png')
 
       .github
           background-image: url('../assets/github.png')
 
       .github:hover
-          background-image: url('../assets/github.png')
+          background-image: url('../assets/github_hover.png')
 
       .researchgate
           background-image: url('../assets/researchgate.png')
 
       .researchgate:hover
-          background-image: url('../assets/researchgate.png')
+          background-image: url('../assets/researchgate_hover.png')
 </style>
