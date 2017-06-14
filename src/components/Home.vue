@@ -63,7 +63,7 @@ import MyTimeline from '@/components/MyTimeline'
 import MyEmail from '@/components/MyEmail'
 
 export default {
-  name: 'hello',
+  name: 'home',
   components: {
     MyTimeline,
     MyEmail
